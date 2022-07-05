@@ -72,6 +72,18 @@ let para = document.querySelector('p');
 para.style = 'font-weight: 700; font-size: 3rem; background-color: green;';
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 
+const listContainer = document.getElementById('list');
+const createElements = () => {
+    fruits.map((fruit, i) => {
+      let fruitElement = document.createElement('li');
+      fruitElement.innerText = `${i+1} ${fruit}`;
+      listContainer.appendChild(fruitElement);
+      listContainer.style = "color: green; list-style-type: none; font-size: 40px;"
+})
+
+}
+createElements()
+// aici creezi elemente li si le bagi valoarea de pe fiecare fruct in parte si le atasezi pe toate ca si copil la listContainer
 // let createElements () {
 //     let list = document.createElement("ul");
 //     document.firstDiv.appendChild(list)
@@ -89,9 +101,7 @@ const fruits = ["Banana", "Orange", "Apple", "Mango"];
 //     let listOfFruits = document.getElementsByClassName("header");
 //     header.appendChild('li');
 // }
-// listFruit.map((fruit) => {
-//     
-// })
+// 
 // let theList = Array.from(document.querySelectorAll('li'));
 // theList.map(fruit, i) => {
 //     theList.innerHTML
